@@ -3,13 +3,13 @@ version: '3.5'
 services:
   postgres:
     container_name: postgres_container
-    image: postgres
+    image: postgres_br
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-postgres}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
       PGDATA: /data/postgres
     volumes:
-       - /home/postgres:/data/postgres
+       - /home/postgres_br:/data/postgres
     ports:
       - "5432:5432"
     networks:
